@@ -51,8 +51,11 @@ public class WishlistServiceImplementation implements WishlistService{
             loggedInUser.setWishlist(wishlist);
         }
         wishlist.getListOfProducts().add(product);
+		
         userRepository.save(loggedInUser); 
+		
         return wishlist;
+	
 	}
 
 	@Override
